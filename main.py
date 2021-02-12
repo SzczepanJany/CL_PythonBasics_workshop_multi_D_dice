@@ -2,7 +2,15 @@ import re
 from random import randint
 
 def throws_and_dices():
-    type_of_throw = input("Enter type of throw: ")
+    while True:
+        type_of_throw = input("Enter type of throw: ")
+        #x = re.search("\b[0-9]*D3|D4|D6|D8|D10|D12|D20|D100{1}[1-9]*[-+]*",type_of_throw)
+        x = re.compile("[0-9]*D3|D4|D6|D8|D10|D12|D20|D100[+-]*[1-9]*$")
+        
+        if x.fullmatch(type_of_throw):
+            break
+        else:
+            print("Enter correct form!")
     result = re.split('[-|D|+]',type_of_throw)
     print(result)
     if "-" in type_of_throw:
