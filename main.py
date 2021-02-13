@@ -4,8 +4,7 @@ from random import randint
 def throws_and_dices():
     while True:
         type_of_throw = input("Enter type of throw: ")
-        #x = re.search("\b[0-9]*D3|D4|D6|D8|D10|D12|D20|D100{1}[1-9]*[-+]*",type_of_throw)
-        x = re.compile("[0-9]*D3[+-]?[1-9]*|D4[+-]?[1-9]*|D6[+-]?[1-9]*|D8[+-]?[1-9]*|D10[+-]?[1-9]*|D12[+-]?[1-9]*|D20[+-]?[1-9]*|D100[+-]?[1-9]*")
+        x = re.compile("[0-9]*D10(0)?([+-][1-9])*|D3([+-][1-9])*|D4([+-][1-9])*|D6([+-][1-9])*|D8([+-][1-9])*|D10([+-][1-9])*|D12([+-][1-9])*|D20([+-][1-9])*")
         
         if x.fullmatch(type_of_throw):
             break
