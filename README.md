@@ -1,2 +1,3 @@
 # CL_PythonBasics_workshop_multi_D_dice
 CL_PythonBasics_workshop_multi_D_dice
+Simple application which is calculating score of dices throw or throws
