@@ -2,6 +2,9 @@ import re
 from random import randint
 
 def throws_and_dices():
+    '''
+    Function is asking user for a throw and checking if it's valid one
+    '''
     while True:
         type_of_throw = input("Enter type of throw: ")
         x = re.compile("[0-9]*(D10(0)?|D3|D4|D6|D8|D12|D20)([+-][1-9]*)?")
@@ -20,6 +23,9 @@ def throws_and_dices():
     return (result,sign)
 
 def do_the_math(operants, operations):
+    '''
+    Function is computing the score
+    '''
     throws = []
     if operants[0] == '':
         mulitple = 1
